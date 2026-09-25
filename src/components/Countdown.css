@@ -1,0 +1,50 @@
+.countdown-band { background: linear-gradient(135deg, rgba(5, 13, 32, 0.72) 0%, rgba(10, 24, 56, 0.72) 100%); border-top: 1px solid rgba(0, 180, 216, 0.25); border-bottom: 1px solid rgba(0, 180, 216, 0.15); padding: 26px 0; color: #ffffff; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35); position: relative; z-index: 10; }
+.countdown-container { display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+@media (max-width: 860px) {
+  .countdown-container { flex-direction: column; text-align: center; gap: 20px; }
+}
+.countdown-title-wrap { display: flex; align-items: center; gap: 14px; }
+@media (max-width: 860px) {
+  .countdown-title-wrap { justify-content: center; }
+}
+.countdown-icon-circle { width: 42px; height: 42px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 180, 216, 0.25) 0%, rgba(0, 98, 155, 0.1) 100%); border: 1px solid rgba(0, 180, 216, 0.4); display: flex; align-items: center; justify-content: center; color: var(--accent); flex-shrink: 0; box-shadow: 0 0 16px rgba(0, 180, 216, 0.3); }
+.countdown-super { display: block; font-size: 0.65rem; font-weight: 800; letter-spacing: 0.16em; color: var(--accent); }
+.countdown-title { font-size: 1.18rem; font-weight: 700; color: #ffffff; letter-spacing: -0.01em; }
+.countdown-digits-grid { display: flex; align-items: center; gap: 12px; perspective: 800px; }
+.digit-unit { position: relative; display: flex; flex-direction: column; align-items: center; background: linear-gradient(180deg, #132448 0%, #0a1630 100%); border: 1px solid rgba(0, 180, 216, 0.3); padding: 10px 18px; border-radius: var(--radius-sm); min-width: 72px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.2), inset 0 -1px 2px rgba(0, 0, 0, 0.6); transform: rotateX(8deg); transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; }
+.digit-unit:hover { transform: rotateX(0deg) translateY(-2px); border-color: var(--accent); box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 180, 216, 0.3); }
+/* Horizontal 3D Split Line */
+.digit-unit::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: rgba(0, 0, 0, 0.4); border-bottom: 1px solid rgba(255, 255, 255, 0.08); pointer-events: none; }
+.digit-number { font-family: var(--font-heading); font-size: 1.55rem; font-weight: 800; color: #ffffff; line-height: 1.1; font-feature-settings: "tnum"; text-shadow: 0 0 12px rgba(0, 180, 216, 0.4); }
+.digit-label { font-size: 0.62rem; font-weight: 700; letter-spacing: 0.14em; color: #94a3b8; margin-top: 4px; }
+.digit-separator { font-size: 1.4rem; font-weight: 700; color: var(--accent); opacity: 0.8; animation: separatorBlink 1s infinite; }
+@keyframes separatorBlink {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+.live-status-chip { display: inline-flex; align-items: center; gap: 8px; background-color: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.35); color: #f87171; padding: 6px 14px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.05em; }
+.live-pulse-icon { animation: pulseDot 1s infinite; }
+
+@media (max-width: 560px) {
+  .countdown-digits-grid { gap: 8px; }
+  .digit-unit { min-width: 62px; padding: 8px 12px; }
+  .digit-number { font-size: 1.35rem; }
+  .digit-separator { font-size: 1.2rem; }
+}
+
+@media (max-width: 420px) {
+  .countdown-band { padding: 20px 0; }
+  .countdown-digits-grid { gap: 5px; }
+  .digit-unit { min-width: 52px; padding: 6px 8px; }
+  .digit-number { font-size: 1.18rem; }
+  .digit-label { font-size: 0.56rem; }
+  .digit-separator { font-size: 1rem; opacity: 0.6; }
+}
+
+@media (max-width: 360px) {
+  .countdown-digits-grid { gap: 4px; }
+  .digit-unit { min-width: 48px; padding: 6px 6px; }
+  .digit-number { font-size: 1.05rem; }
+  .digit-separator { display: none; }
+}
+

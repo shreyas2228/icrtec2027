@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap');
+
+/* ==========================================================================
+   DESIGN SYSTEM: THE NATIONAL INSTITUTE OF ENGINEERING (NIE) - IEEE
+   UNIFIED EXECUTIVE 3D CYBER-GLASS DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Primary & Brand Colors */
+  --primary: #07132c;             /* Deep Navy */
+  --primary-light: #0d214a;       /* Medium Navy */
+  --primary-dark: #030713;        /* Executive Void Space */
+  --secondary: #00629b;           /* IEEE Official Blue */
+  --secondary-hover: #0080ca;     /* Brightened IEEE Blue */
+  --accent: #00b4d8;              /* Electric Cyan */
+  --accent-light: #90e0ef;        /* Ice Cyan */
+  --accent-glow: rgba(0, 180, 216, 0.45);
+  --gold: #e0a96d;                /* Honorary Gold */
+  --gold-glow: rgba(224, 169, 109, 0.35);
+
+  /* Unified Executive Glassmorphic Surfaces (Reveals 3D WebGL Background) */
+  --background: transparent;
+  --surface: rgba(11, 23, 50, 0.72);
+  --surface-raised: rgba(16, 32, 68, 0.82);
+  --surface-subtle: rgba(7, 16, 36, 0.65);
+  
+  /* Text & Typography Colors (High Contrast on Dark Glass) */
+  --text: #ffffff;                /* Pure White for crisp headings */
+  --text-secondary: #cbd5e1;      /* Slate 300 for readable descriptions */
+  --muted: #94a3b8;               /* Slate 400 for secondary tags */
+  --border: rgba(0, 180, 216, 0.18); /* Subtle Cyber Cyan Border */
+  --border-light: rgba(255, 255, 255, 0.08); /* Frosted specular rim */
+
+  /* Dark Theme Aliases */
+  --dark-bg: #030713;
+  --dark-surface: rgba(11, 23, 50, 0.75);
+  --dark-surface-elevated: rgba(18, 36, 76, 0.85);
+  --dark-text: #ffffff;
+  --dark-text-secondary: #cbd5e1;
+  --dark-muted: #94a3b8;
+  --dark-border: rgba(0, 180, 216, 0.22);
+  --dark-border-subtle: rgba(255, 255, 255, 0.1);
+
+  /* Typography Families */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Typography Scale */
+  --font-size-hero: clamp(2.4rem, 5vw, 4rem);
+  --font-size-h1: clamp(2rem, 3.5vw, 2.75rem);
+  --font-size-h2: clamp(1.6rem, 2.5vw, 2.2rem);
+  --font-size-h3: clamp(1.2rem, 1.8vw, 1.5rem);
+  --font-size-body-lg: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-label: 0.75rem;
+
+  /* Layout & Spacing */
+  --container-max-width: 1320px;
+  --section-padding-y: 100px;
+  --section-padding-mobile: 60px;
+
+  /* Elevation & 3D Lighting Shadows */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-card: 0 14px 36px rgba(0, 0, 0, 0.55), 0 0 20px rgba(0, 180, 216, 0.12);
+  --shadow-dark-card: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 30px rgba(0, 180, 216, 0.2);
+  --shadow-accent-glow: 0 0 30px var(--accent-glow);
+
+  /* Border Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   CSS RESET & BASE DEFAULTS
+   ========================================================================== */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: #030713;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background-color: transparent;
+  color: var(--text);
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ==========================================================================
+   CONTAINER & LAYOUT SYSTEM
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+  position: relative;
+  z-index: 1;
+}
+
+/* Unified Frosted Glassmorphism Section Rhythm (Seamless 3D WebGL visibility throughout page) */
+.section-light {
+  background: rgba(8, 18, 42, 0.42);
+  color: #ffffff;
+  border-top: 1px solid rgba(0, 180, 216, 0.15);
+  border-bottom: 1px solid rgba(0, 180, 216, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.section-subtle {
+  background: rgba(5, 12, 30, 0.48);
+  color: #ffffff;
+  border-top: 1px solid rgba(0, 180, 216, 0.18);
+  border-bottom: 1px solid rgba(0, 180, 216, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.section-dark {
+  background: rgba(3, 8, 22, 0.52);
+  color: #ffffff;
+  border-top: 1px solid rgba(0, 180, 216, 0.22);
+  border-bottom: 1px solid rgba(0, 180, 216, 0.22);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   TYPOGRAPHY HIERARCHY
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.hero-heading {
+  font-size: var(--font-size-hero);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 56px;
+}
+
+.section-badge, .section-badge-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 16px;
+  background: rgba(0, 180, 216, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  box-shadow: 0 0 18px rgba(0, 180, 216, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+.section-title {
+  font-size: var(--font-size-h2);
+  font-weight: 800;
+  margin-bottom: 14px;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.section-desc {
+  font-size: var(--font-size-body-lg);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-white-muted {
+  color: #cbd5e1 !important;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #ffffff 30%, #00b4d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ==========================================================================
+   BUTTON STYLES WITH 3D HOVER SHIMMER
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-small);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primary {
+  background-color: var(--secondary);
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 98, 155, 0.45);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+}
+
+.btn-primary::after,
+.btn-accent::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: rotate(25deg);
+  pointer-events: none;
+}
+
+.btn-primary:hover::after,
+.btn-accent:hover::after {
+  left: 140%;
+  transition: left 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-hover);
+  box-shadow: 0 8px 26px rgba(0, 180, 216, 0.55);
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 180, 216, 0.45);
+}
+
+.btn-accent:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0, 180, 216, 0.65);
+  filter: brightness(1.1);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(0, 180, 216, 0.15);
+  border-color: rgba(0, 180, 216, 0.45);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-white:hover {
+  border-color: var(--accent);
+  background-color: rgba(0, 180, 216, 0.15);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   CARD STYLES - 3D GLASS ELEVATION
+   ========================================================================== */
+
+.card, .card-dark, .glass-card-3d {
+  background: rgba(11, 23, 50, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0, 180, 216, 0.18);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  color: #ffffff;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.5), 0 0 1px rgba(0, 180, 216, 0.25);
+  transition: all var(--transition-smooth);
+  transform-style: preserve-3d;
+}
+
+.card:hover, .card-dark:hover, .glass-card-3d:hover {
+  border-color: rgba(0, 180, 216, 0.45);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.65), 0 0 25px rgba(0, 180, 216, 0.25);
+  transform: translateY(-4px);
+}
+
+/* ==========================================================================
+   PERVASIVE 3D ANIMATION UTILITIES & KEYFRAMES
+   ========================================================================== */
+
+@keyframes float3D {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes glowPulse3D {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(0, 180, 216, 0.2);
+    border-color: rgba(0, 180, 216, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0, 180, 216, 0.5);
+    border-color: rgba(0, 180, 216, 0.6);
+  }
+}
+
+@keyframes pulseGold3D {
+  0%, 100% {
+    box-shadow: 0 0 18px rgba(224, 169, 109, 0.25);
+    border-color: rgba(224, 169, 109, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 36px rgba(224, 169, 109, 0.6);
+    border-color: rgba(224, 169, 109, 0.75);
+  }
+}
+
+.animate-float-3d {
+  animation: float3D 6s ease-in-out infinite;
+}
+
+.animate-glow-3d {
+  animation: glowPulse3D 4s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   CUSTOM SLEEK TECH SCROLLBAR & SELECTION
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #020612;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00629b;
+  border-radius: 4px;
+  border: 2px solid #020612;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00b4d8;
+  box-shadow: 0 0 8px #00b4d8;
+}
+
+::selection {
+  background: rgba(0, 180, 216, 0.35);
+  color: #ffffff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .section {
+    padding-top: var(--section-padding-mobile);
+    padding-bottom: var(--section-padding-mobile);
+  }
+  .card, .card-dark, .glass-card-3d {
+    padding: 24px;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .hero-actions-row .btn,
+  .pub-buttons-row .btn,
+  .venue-action-buttons .btn,
+  .nie-cta-group .btn,
+  .modal-action-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

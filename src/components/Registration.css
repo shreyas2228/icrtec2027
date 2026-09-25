@@ -1,0 +1,344 @@
+.registration-section {
+  background: transparent;
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.registration-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background: rgba(12, 24, 52, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 18px 26px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 180, 216, 0.22);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.deadline-pills {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.deadline-pill {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.early-pill {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.pill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.currency-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.currency-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.currency-toggle {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 4px;
+}
+
+.currency-btn {
+  background: none;
+  border: none;
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.currency-btn.active {
+  background: var(--accent);
+  color: #030713;
+  font-weight: 700;
+  box-shadow: 0 0 14px rgba(0, 180, 216, 0.5);
+}
+
+/* Pricing Table */
+.registration-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(0, 180, 216, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+  margin-bottom: 40px;
+  background: rgba(10, 22, 48, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.registration-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.registration-table th {
+  background: rgba(14, 28, 62, 0.9);
+  padding: 20px 24px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(0, 180, 216, 0.25);
+}
+
+.th-early {
+  background: rgba(0, 180, 216, 0.12) !important;
+  color: var(--accent) !important;
+  position: relative;
+}
+
+.th-badge {
+  position: absolute;
+  top: -10px;
+  right: 18px;
+  background: var(--accent);
+  color: #030713;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(0, 180, 216, 0.6);
+}
+
+.th-sub {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 400;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.registration-table td {
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  vertical-align: middle;
+  color: #cbd5e1;
+}
+
+.row-ieee-member {
+  background: rgba(0, 98, 155, 0.08);
+}
+
+.row-ieee-member:hover {
+  background: rgba(0, 180, 216, 0.12);
+}
+
+.category-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.category-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ieee-member-tag {
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.td-early-price {
+  background: rgba(0, 180, 216, 0.05);
+}
+
+.price-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.td-early-price .price-val {
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+}
+
+.reg-table-btn {
+  white-space: nowrap;
+}
+
+/* Info Grid */
+.registration-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.reg-info-card {
+  background: rgba(12, 24, 52, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  border-radius: var(--radius-md);
+  padding: 26px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.info-icon {
+  color: var(--accent);
+  filter: drop-shadow(0 0 6px rgba(0, 180, 216, 0.5));
+}
+
+.info-header h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.reg-info-card p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.inclusions-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inclusions-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #e2e8f0;
+}
+
+.check-bullet {
+  color: var(--accent);
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(0, 180, 216, 0.6));
+}
+
+/* CTA Banner */
+.registration-cta-banner {
+  background: linear-gradient(135deg, rgba(8, 20, 48, 0.92) 0%, rgba(14, 34, 76, 0.95) 100%);
+  border: 1px solid rgba(0, 180, 216, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 34px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 180, 216, 0.15);
+  backdrop-filter: blur(16px);
+}
+
+.cta-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-icon {
+  color: var(--accent);
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(0, 180, 216, 0.6));
+}
+
+.cta-left h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.cta-left p {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .registration-info-grid { grid-template-columns: 1fr; }
+  .registration-cta-banner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 600px) {
+  .registration-top-bar {
+    padding: 14px 16px;
+  }
+  .registration-table th,
+  .registration-table td {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
+  .price-val {
+    font-size: 1rem;
+  }
+  .registration-cta-banner {
+    padding: 24px 20px;
+    gap: 16px;
+  }
+  .cta-left h3 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .deadline-pills {
+    gap: 10px;
+  }
+  .reg-info-card {
+    padding: 20px 16px;
+  }
+}
+

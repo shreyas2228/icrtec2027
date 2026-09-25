@@ -1,0 +1,149 @@
+.floating-fab-container {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.fab-btn {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-full, 9999px);
+  border: 1px solid var(--border, rgba(0, 180, 216, 0.25));
+  text-decoration: none;
+  font-family: var(--font-body, inherit);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 16px rgba(0, 180, 216, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: perspective(600px) translateZ(0);
+}
+
+.fab-btn:hover {
+  transform: perspective(600px) translateY(-3px) translateZ(10px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5), 0 0 24px rgba(0, 180, 216, 0.45);
+}
+
+.fab-btn:active {
+  transform: perspective(600px) translateY(0) scale(0.96);
+}
+
+/* Quick Register Button */
+.fab-register-btn {
+  background: linear-gradient(135deg, rgba(0, 98, 155, 0.92) 0%, rgba(0, 180, 216, 0.95) 100%);
+  color: #ffffff;
+  padding: 11px 20px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.fab-register-btn:hover {
+  background: linear-gradient(135deg, rgba(0, 128, 202, 0.98) 0%, rgba(0, 210, 255, 1) 100%);
+  color: #ffffff;
+}
+
+.fab-pulse-ring {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 2px solid var(--accent, #00b4d8);
+  opacity: 0.8;
+  animation: fabPulse 2.4s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes fabPulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.24);
+    opacity: 0;
+  }
+}
+
+.fab-text {
+  white-space: nowrap;
+}
+
+/* Back to Top Button */
+.fab-top-btn {
+  width: 44px;
+  height: 44px;
+  background: rgba(7, 19, 44, 0.88);
+  color: var(--accent, #00b4d8);
+  border: 1px solid var(--dark-border, rgba(0, 180, 216, 0.3));
+}
+
+.fab-top-btn:hover {
+  background: rgba(11, 27, 62, 0.98);
+  color: #ffffff;
+  border-color: var(--accent-light, #90e0ef);
+}
+
+.fab-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: perspective(600px) translateY(0);
+}
+
+.fab-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: perspective(600px) translateY(16px);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .floating-fab-container {
+    bottom: 20px;
+    right: 18px;
+    gap: 10px;
+  }
+
+  .fab-register-btn {
+    padding: 10px 16px;
+    font-size: 0.82rem;
+  }
+
+  .fab-top-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  .floating-fab-container {
+    bottom: 16px;
+    right: 14px;
+  }
+
+  .fab-register-btn {
+    padding: 8px 13px;
+    font-size: 0.76rem;
+  }
+
+  .fab-top-btn {
+    width: 36px;
+    height: 36px;
+  }
+}
+

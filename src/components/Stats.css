@@ -1,0 +1,17 @@
+.stats-section { background: transparent; border-top: 1px solid var(--dark-border); border-bottom: 1px solid var(--dark-border); padding: 90px 0; position: relative; overflow: hidden; z-index: 2; }
+.stats-header { text-align: center; max-width: 650px; margin: 0 auto 50px; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+@media (max-width: 1024px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+.stat-tilt-item { height: 100%; }
+.stat-card-tilt { height: 100%; }
+.stat-card { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 36px 24px; background: linear-gradient(180deg, rgba(12, 28, 61, 0.8) 0%, rgba(7, 19, 44, 0.9) 100%); border: 1px solid rgba(0, 180, 216, 0.25); border-radius: var(--radius-lg); backdrop-filter: blur(10px); height: 100%; transform-style: preserve-3d; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
+.stat-card-tilt:hover .stat-card { border-color: var(--accent); box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(0, 180, 216, 0.3); }
+.stat-icon-wrapper { width: 56px; height: 56px; border-radius: 50%; background: radial-gradient(circle, rgba(0, 180, 216, 0.25) 0%, rgba(0, 98, 155, 0.1) 100%); border: 1px solid rgba(0, 180, 216, 0.45); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 20px; transition: all var(--transition-fast); transform: translateZ(30px); box-shadow: 0 0 16px rgba(0, 180, 216, 0.25); }
+.stat-card-tilt:hover .stat-icon-wrapper { transform: translateZ(40px) scale(1.12); background: var(--accent); color: var(--primary); box-shadow: 0 0 24px rgba(0, 180, 216, 0.6); }
+.stat-number { font-family: var(--font-heading); font-size: 2.8rem; font-weight: 800; color: #ffffff; line-height: 1; margin-bottom: 10px; letter-spacing: -0.02em; transform: translateZ(25px); text-shadow: 0 0 20px rgba(0, 180, 216, 0.4); }
+.stat-metric-name { font-size: 0.88rem; font-weight: 600; color: #94a3b8; letter-spacing: 0.02em; transform: translateZ(18px); }
