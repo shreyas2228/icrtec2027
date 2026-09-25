@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle2, ExternalLink, MessageCircle } from 'lucide-react';
+import { Mail, MapPin, Clock, Send, CheckCircle2, ExternalLink, MessageCircle } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import './Contact.css';
 
@@ -91,17 +91,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="contact-detail-item">
-                  <div className="detail-icon-box">
-                    <Phone size={18} />
-                  </div>
-                  <div>
-                    <span className="detail-label">Secretariat Phone</span>
-                    <a href={`tel:${conference.contactPhone}`} className="detail-link">
-                      {conference.contactPhone}
-                    </a>
-                  </div>
-                </div>
 
                 <div className="contact-detail-item">
                   <div className="detail-icon-box">

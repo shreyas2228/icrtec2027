@@ -34,7 +34,6 @@ export const conferenceData = {
     "paperSubmissionUrl": "#publication",
     "brochureUrl": "#publication",
     "contactEmail": "icrtec2027@nie.ac.in",
-    "contactPhone": "+91 821 2480475",
     "cmtUrl": "https://cmt3.research.microsoft.com/",
     "previousEditionUrl": "https://ieeexplore.ieee.org/xpl/conhome/1849209/all-proceedings"
   },
@@ -224,8 +223,8 @@ export const conferenceData = {
     ]
   },
   "importantDates": [
-    { "id": "d1", "title": "Call for Papers", "date": "15 October 2026", "status": "completed", "description": "Submission system opens on Microsoft CMT portal." },
-    { "id": "d2", "title": "Paper Submission Deadline", "date": "15 May 2027", "status": "active", "description": "Full research papers up to 6 pages in standard IEEE format." },
+    { "id": "d1", "title": "Call for Papers", "date": "15 October 2026", "status": "active", "description": "Submission system opens on Microsoft CMT portal." },
+    { "id": "d2", "title": "Paper Submission Deadline", "date": "15 May 2027", "status": "upcoming", "description": "Full research papers up to 6 pages in standard IEEE format." },
     { "id": "d3", "title": "Notification of Acceptance", "date": "30 June 2027", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
     { "id": "d4", "title": "Early-Bird Registration Deadline", "date": "15 July 2027", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
     { "id": "d5", "title": "Camera-Ready Submission", "date": "20 July 2027", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },

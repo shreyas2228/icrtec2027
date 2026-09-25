@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Eye, ExternalLink, Mail, MapPin, Phone, ShieldCheck, ArrowUp } from 'lucide-react';
+import { Eye, ExternalLink, Mail, MapPin, ShieldCheck, ArrowUp } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import './Footer.css';
 
@@ -54,11 +54,6 @@ export default function Footer() {
             <div className="footer-contact-link">
               <Mail size={14} className="inline-icon" />
               <a href={`mailto:${conference.contactEmail}`}>{conference.contactEmail}</a>
-            </div>
-
-            <div className="footer-contact-link" style={{ marginTop: '6px' }}>
-              <Phone size={14} className="inline-icon" />
-              <a href={`tel:${conference.contactPhone}`}>{conference.contactPhone}</a>
             </div>
           </div>
 
