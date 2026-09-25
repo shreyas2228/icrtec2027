@@ -4,7 +4,6 @@ import {
   Award, 
   Shield, 
   Search, 
-  Sparkles, 
   Building2, 
   Globe, 
   Users, 
@@ -62,7 +61,7 @@ export default function Committee() {
     { id: 'tpc', label: 'Technical Program Committee', count: tpcMembers.length, icon: Users },
     { id: 'tracks', label: 'Track Chairs', count: trackChairMembers.length, icon: Award },
     { id: 'operations', label: 'Organizing Teams', count: operationsMembers.length, icon: Briefcase },
-    { id: 'all', label: 'All Scholars', count: allDirectoryMembers.length, icon: Sparkles }
+    { id: 'all', label: 'All Scholars', count: allDirectoryMembers.length, icon: LayoutGrid }
   ];
 
   const filteredDirectoryMembers = useMemo(() => {
@@ -132,7 +131,7 @@ export default function Committee() {
                 <div className="chief-patron-card">
                   <div className="chief-card-halo"></div>
                   <div className="chief-badge">
-                    <Sparkles size={14} className="gold-sparkle" />
+                    <Award size={14} className="chief-badge-icon" />
                     <span>CHIEF PATRON</span>
                   </div>
                   <div className="chief-avatar-box">
@@ -197,7 +196,6 @@ export default function Committee() {
               <Tilt3D key={idx} maxTilt={12} scale={1.03} className="chair-bento-tilt">
                 <div className="chair-bento-card">
                   <div className="chair-role-badge">
-                    <Sparkles size={12} className="inline-sparkle" />
                     <span>{chair.roleTitle}</span>
                   </div>
                   <h4 className="chair-card-name">{chair.name}</h4>

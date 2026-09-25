@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Clock, Globe, Award, Building2, BookOpen, ArrowRight, Mic, Calendar } from 'lucide-react';
+import { Clock, Globe, Award, Building2, BookOpen, ArrowRight, Mic, Calendar } from 'lucide-react';
 import './Speakers.css';
 
 export default function Speakers() {
@@ -67,7 +67,6 @@ export default function Speakers() {
           <div className="coming-up-header-row">
             <div className="coming-up-badge">
               <span className="pulsing-beacon"></span>
-              <Sparkles size={14} className="beacon-icon" />
               <span>Coming Up</span>
             </div>
             <div className="coming-up-sub-badge">

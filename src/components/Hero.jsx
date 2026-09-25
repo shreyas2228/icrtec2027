@@ -18,8 +18,7 @@ import {
   Activity, 
   HeartPulse, 
   Sprout,
-  ExternalLink,
-  Sparkles
+  ExternalLink
 } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import Hero3DCanvas from './common/Hero3DCanvas';
@@ -109,7 +108,6 @@ export default function Hero() {
             {/* Conference Theme Spotlight */}
             <div className="hero-theme-spotlight">
               <div className="hero-theme-tag">
-                <Sparkles size={13} className="inline-icon" />
                 <span>THEME</span>
               </div>
               <span className="hero-theme-text">{conference.theme}</span>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Camera, X, ChevronLeft, ChevronRight, Maximize2, Sparkles } from 'lucide-react';
+import { Camera, X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import Tilt3D from './common/Tilt3D';
 import './Gallery.css';

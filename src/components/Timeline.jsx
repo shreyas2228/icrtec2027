@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, CheckCircle2, Clock, Sparkles, AlertCircle, ArrowRight } from 'lucide-react';
+import { Calendar, CheckCircle2, Clock, AlertCircle, ArrowRight } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import './Timeline.css';
 
@@ -11,7 +11,7 @@ export default function Timeline() {
     if (isHighlight) {
       return (
         <span className="timeline-status-badge badge-highlight">
-          <Sparkles size={13} className="inline-icon" /> Conference Days
+          <Calendar size={13} className="inline-icon" /> Conference Days
         </span>
       );
     }

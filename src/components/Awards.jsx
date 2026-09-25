@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Trophy, Award, GraduationCap, CheckCircle2, Star, Sparkles } from 'lucide-react';
+import { Trophy, Award, GraduationCap, CheckCircle2, Star } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import Tilt3D from './common/Tilt3D';
 import './Awards.css';
@@ -41,7 +41,7 @@ export default function Awards() {
                   <div className={`award-card ${isGrand ? 'is-grand-award' : ''}`}>
                     {isGrand && (
                       <div className="grand-award-banner">
-                        <Sparkles size={13} />
+                        <Trophy size={13} />
                         <span>PREMIER HONOR</span>
                       </div>
                     )}
