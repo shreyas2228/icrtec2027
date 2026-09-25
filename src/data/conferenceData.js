@@ -26,7 +26,7 @@ export const conferenceData = {
     "technicalCoSponsors": "IEEE ComSoC and IEEE CAS, Bangalore Section",
     "ieeeNotice": "Accepted and presented papers will be submitted for possible inclusion in IEEE Xplore, subject to meeting IEEE Xplore's scope and quality requirements.",
     "dates": "Sep 16-17, 2027",
-    "countdownTarget": "2027-09-16T09:00:00+05:30",
+    "countdownTarget": "2026-10-15T23:59:59+05:30",
     "venue": "The National Institute of Engineering, Manandavadi Road, Mysuru – 570008, Karnataka, India",
     "mode": "Hybrid (In-person & Virtual Presentation Options)",
     "theme": "Artificial Intelligence and Sustainability in Electronics and Communication",
@@ -223,13 +223,13 @@ export const conferenceData = {
     ]
   },
   "importantDates": [
-    { "id": "d1", "title": "Call for Papers", "date": "15 October 2026", "status": "active", "description": "Submission system opens on Microsoft CMT portal." },
-    { "id": "d2", "title": "Paper Submission Deadline", "date": "15 May 2027", "status": "upcoming", "description": "Full research papers up to 6 pages in standard IEEE format." },
-    { "id": "d3", "title": "Notification of Acceptance", "date": "30 June 2027", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
-    { "id": "d4", "title": "Early-Bird Registration Deadline", "date": "15 July 2027", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
-    { "id": "d5", "title": "Camera-Ready Submission", "date": "20 July 2027", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },
-    { "id": "d6", "title": "Author Registration Deadline", "date": "31 July 2027", "status": "upcoming", "description": "Mandatory registration closes for accepted paper authors." },
-    { "id": "d7", "title": "Conference Dates", "date": "Sep 16-17, 2027", "status": "upcoming", "description": "Keynotes, oral track presentations, panel sessions, and awards banquet.", "isHighlight": true }
+    { "id": "d1", "title": "Call for Papers", "date": "15 October 2026", "isoDate": "2026-10-15T23:59:59+05:30", "status": "active", "description": "Submission system opens on Microsoft CMT portal." },
+    { "id": "d2", "title": "Paper Submission Deadline", "date": "15 May 2027", "isoDate": "2027-05-15T23:59:59+05:30", "status": "upcoming", "description": "Full research papers up to 6 pages in standard IEEE format." },
+    { "id": "d3", "title": "Notification of Acceptance", "date": "30 June 2027", "isoDate": "2027-06-30T23:59:59+05:30", "status": "upcoming", "description": "Peer-review feedback and acceptance decisions communicated." },
+    { "id": "d4", "title": "Early-Bird Registration Deadline", "date": "15 July 2027", "isoDate": "2027-07-15T23:59:59+05:30", "status": "upcoming", "description": "Concessional registration closes for authors and delegates." },
+    { "id": "d5", "title": "Camera-Ready Submission", "date": "20 July 2027", "isoDate": "2027-07-20T23:59:59+05:30", "status": "upcoming", "description": "Final PDF submission with signed IEEE copyright transfer form." },
+    { "id": "d6", "title": "Author Registration Deadline", "date": "31 July 2027", "isoDate": "2027-07-31T23:59:59+05:30", "status": "upcoming", "description": "Mandatory registration closes for accepted paper authors." },
+    { "id": "d7", "title": "Conference Dates", "date": "Sep 16-17, 2027", "isoDate": "2027-09-16T09:00:00+05:30", "status": "upcoming", "description": "Keynotes, oral track presentations, panel sessions, and awards banquet.", "isHighlight": true }
   ],
   "awards": [
     { "id": "aw-1", "title": "Best Research Paper Award", "description": "Conferred to the author(s) demonstrating superior scientific originality, analytical rigor, and transformative technological impact.", "eligibility": "All regular technical papers peer-reviewed, accepted, and presented in person during oral conference tracks." },

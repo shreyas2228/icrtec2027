@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Clock, Radio } from 'lucide-react';
 import { conferenceData } from '../data/conferenceData';
 import './Countdown.css';
 
 export default function Countdown() {
-  const { conference } = conferenceData;
+  const { conference, importantDates } = conferenceData;
+
+  // Dynamically locate the active milestone or next upcoming deadline
+  const activeMilestone =
+    (importantDates || []).find((d) => d.status === 'active') ||
+    (importantDates || []).find((d) => d.status === 'upcoming') ||
+    { title: 'Call for Papers', date: '15 October 2026', isoDate: '2026-10-15T23:59:59+05:30' };
+
+  const targetDateStr = activeMilestone.isoDate || conference.countdownTarget || '2026-10-15T23:59:59+05:30';
+  const milestoneTitle = activeMilestone.title;
+  const milestoneDate = activeMilestone.date;
+
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -15,7 +25,7 @@ export default function Countdown() {
   });
 
   useEffect(() => {
-    const targetDate = new Date(conference.countdownTarget).getTime();
+    const targetDate = new Date(targetDateStr).getTime();
 
     const updateTimer = () => {
       const now = new Date().getTime();
@@ -37,7 +47,7 @@ export default function Countdown() {
     updateTimer();
     const interval = setInterval(updateTimer, 1000);
     return () => clearInterval(interval);
-  }, [conference.countdownTarget]);
+  }, [targetDateStr]);
 
   return (
     <div className="countdown-band">
@@ -46,7 +56,7 @@ export default function Countdown() {
           {timeLeft.isLive ? (
             <div className="live-status-chip">
               <Radio size={16} className="live-pulse-icon" />
-              <span>THE CONFERENCE IS LIVE</span>
+              <span>{milestoneTitle.toUpperCase()} IS NOW ACTIVE</span>
             </div>
           ) : (
             <div className="countdown-title-wrap">
@@ -54,8 +64,8 @@ export default function Countdown() {
                 <Clock size={16} />
               </div>
               <div>
-                <span className="countdown-super">COUNTDOWN TO SESSIONS</span>
-                <h3 className="countdown-title">Conference Begins In</h3>
+                <span className="countdown-super">ACTIVE DEADLINE • {milestoneDate}</span>
+                <h3 className="countdown-title">{milestoneTitle} In</h3>
               </div>
             </div>
           )}
@@ -85,7 +95,7 @@ export default function Countdown() {
           </div>
         ) : (
           <div className="live-banner">
-            <p>Sessions and keynote livestreams are currently underway at NIE Mysuru.</p>
+            <p>{milestoneTitle} portal is now open for manuscript submissions.</p>
           </div>
         )}
       </div>
