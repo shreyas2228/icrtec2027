@@ -49,12 +49,8 @@ export default function Navbar() {
   return (
     <header className={`navbar-header ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="container navbar-container">
-        {/* Left: Dual Branding (IEEE & NIE) */}
+        {/* Left: Branding (NIE) - IEEE badge temporarily hidden pending approval */}
         <a href="#home" onClick={(e) => scrollToSection(e, 'home')} className="navbar-brand-group">
-          <div className="brand-logo-circle ieee-circle">
-            <span className="logo-text">IEEE</span>
-          </div>
-          <div className="brand-separator"></div>
           <div className="brand-logo-circle nie-circle">
             <img src="/nie-logo.png" alt="NIE Logo" className="brand-nie-logo" />
           </div>

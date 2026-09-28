@@ -83,7 +83,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="hero-badge-row"
           >
-            <span className="hero-ieee-tag">IEEE ComSoC & IEEE CAS TECHNICAL CO-SPONSORED</span>
+            <span className="hero-ieee-tag">— Co-Sponsored</span>
             <span className="hero-inst-pill">{institution.name}, Mysuru</span>
           </motion.div>
 
